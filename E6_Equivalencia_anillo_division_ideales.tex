@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla para un art�culo en LaTeX en espa�ol.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+
+% Paquetes de la AMS:
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+% Teoremas
+%--------------------------------------------------------------------------
+\newtheorem*{teorema*}{Teorema}
+\newtheorem{teorema}{Teorema}
+
+% Atajos.
+%------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------
+\title{Ejercicio 6}
+\author{Blanca Cano Camarero}
+
+\begin{document}
+\maketitle
+
+\begin{teorema*}
+    Sea $A$ un anillo, $A$ es un anillo de división sii tiene exactamente dos ideales a izquierda. 
+\end{teorema*}   
+\begin{proof}
+Condición suficiente: 
+
+Por definición $N$ es un submódulo del módulo regular de $A$ si 
+para cualquier $m\in N$ se tiene que $am \in N$ sea cual sea $a \in A$. 
+
+Bajo esta definición está claro que $\{0\}$ es un submódulo del módulo regular. Supongamos otro submódulo no trivial $N$
+con $a \in N$ diferente del $0$, entonces puesto que es un anillo unitario  existirá $a^{-1} \in A$, de esta manera se tiene que 
+$a^{-1} a \in N.$
+Aplicando de nuevo que es un submódulo se tiene que 
+$a 1 \in N$ para todo $a \in A$, esto es $N=A$. 
+
+Es decir acabamos de probar que cualquier submódulo no trivial es necesariamente el total, por lo que concluímos que tiene dos submódulo. 
+
+Condición necesaria: 
+
+Está claro que $\{0\}$ y $A$ son submódulos del módulo regular $A$, puesto que tiene solo dos e dos ideales a la izquierda deben de ser ellos.  
+
+Tomamos $a \in A$ y queremos ver que tiene inverso. Por se $A$ 
+un ideal a la izquierda 
+$Aa = A$ por lo que existirá un elemento $a^{-1} \in A$ tal que 
+$a^{-1} a = 1$. 
+Por otro lado repetimos el mismo argumento $Aa^{-1} = A$ con  obteniendo $b \in A$ tal que $a^{-1}b = 1$,
+Por lo que concatenando ambas igualdades
+$ba=1$, entonces $ba^{-1}a=c$, $(ba^{-1})a=b$, $a = b$ probando con ello lo buscado
+$$a^{-1}a = 1 = ba^{-1} =  a a^{-1}.$$
+\end{proof}
+
+
+
+
+
+\end{document}
