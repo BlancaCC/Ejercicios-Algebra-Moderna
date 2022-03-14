@@ -1,0 +1,51 @@
+\documentclass{article}
+
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+
+% Paquetes de la AMS:
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+% Teoremas
+%--------------------------------------------------------------------------
+\newtheorem*{teorema*}{Teorema}
+\newtheorem{teorema}{Teorema}
+
+% Atajos.
+%------------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+%-------------------------------------------------------------------------
+\title{Ejercicio 4 álgebra moderna}
+\author{Blanca Cano Camarero}
+
+\begin{document}
+\maketitle
+
+\begin{teorema*}
+    Sea $T:V \longrightarrow V$ una transformación lineal en un $K-$espacio vectorial de dimensión finita $V$.
+    Se tiene que si $V \neq \{0\}$ y $\{0\}$ y $V$ son los únicos 
+    subespacios $T$-invariantes de $V$, entonces el polinomio mínimo de $T$ es irreducible en $K[X]$. El recíproco no es cierto. 
+\end{teorema*}   
+
+\begin{proof}
+   Sea $\mu$ el polinomio mínimo de $T$, que admitirá una descomposición en factores irreducibles de la forma
+   $\mu = \prod^n_i=1 p_i$ con $n \in \N$. 
+   Para cada $i \in \{1, \ldots, n\}$ llamamos  $q_i = \frac{\mu}{p_i}$ y definimos
+   \begin{equation*}
+       V_i = \{ q_i m : m \in K\}
+   \end{equation*}
+   Cada $V_i$ es un  $k-$submódulo. 
+
+   Pero como los únicos conjuntos son los $T$-invariantes entonces $\mu$ debe de ser irreducible. 
+\end{proof}
+
+
+Contraejemplo de que el recíproco no es cierto. 
+
+
+
+
+\end{document}
