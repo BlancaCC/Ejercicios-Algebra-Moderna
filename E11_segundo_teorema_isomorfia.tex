@@ -1,0 +1,68 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla para un art�culo en LaTeX en espa�ol.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+
+% Paquetes de la AMS:
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+% Teoremas
+%--------------------------------------------------------------------------
+\newtheorem*{teorema*}{Teorema}
+\newtheorem{teorema}{Teorema}
+
+% Atajos.
+%------------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+%-------------------------------------------------------------------------
+\title{Ejercicio 11}
+\author{Blanca Cano Camarero}
+
+\begin{document}
+\maketitle
+
+\begin{teorema*}
+    Sean $L$, $N$ submódulos de un módulo $M$. Demostrad, a partir del primer Teorema del isomorfismo, que existe un isomorfismo de módulos $\frac{N}{L \cap N}.$
+\end{teorema*}   
+
+\begin{proof}
+   En efecto, vamos a probar que 
+   \begin{equation}\label{1}
+       \frac{N}{N \cap L} \simeq \frac{N + L}{L}.
+   \end{equation}
+
+   Consideramos la proyección $\pi : M \longrightarrow \frac{M}{L}$ dada por $\pi(m)= m+L.$
+   Para $\pi_{|N}$ la restricción en $N$, se tiene que 
+   $ker(\pi_{|N}) = N \cap L$, $Img(\pi_{|N})= N+L$ y además por 
+   el primer teorema de isomorfía, existe un isomorfismo, llamémosle $\phi_1$ por el cual 
+   \begin{equation}\label{2}
+       \frac{N}{N \cap L} 
+       \simeq
+       N+L.
+   \end{equation}
+
+   Por otro lado consideramos ahora  $\pi_{|N+L}$la restricción en $N+L$, que satisface que 
+   $ker(\pi_{|N+L}) = L$ y 
+   $Img(\pi_{|N+L})=\pi(N+L) = (N+L)+L = N+L$. Por el primer teorema de isomorfía existe un isomorfismo $\phi_2$ para el cual 
+   \begin{equation}\label{3}
+       \frac{N+L}{L} \simeq N+L.
+   \end{equation}
+    Por la transitividad de la isomorfía y las relaciones (\ref{2}) y (\ref{3}) acabamos de probar la relación (\ref{1}) vía el isomorfismo $\phi = \phi_2^{-1} \circ \phi_1$.
+
+
+\end{proof}
+
+
+
+
+
+\end{document}
