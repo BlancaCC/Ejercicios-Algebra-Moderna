@@ -31,21 +31,72 @@
 \end{teorema*}   
 
 \begin{proof}
-   Sea $\mu$ el polinomio mínimo de $T$, que admitirá una descomposición en factores irreducibles de la forma
-   $\mu = \prod^n_i=1 p_i$ con $n \in \N$. 
-   Para cada $i \in \{1, \ldots, n\}$ llamamos  $q_i = \frac{\mu}{p_i}$ y definimos
-   \begin{equation*}
-       V_i = \{ q_i m : m \in K\}
-   \end{equation*}
-   Cada $V_i$ es un  $k-$submódulo. 
 
-   Pero como los únicos conjuntos son los $T$-invariantes entonces $\mu$ debe de ser irreducible. 
+    Se tiene que $V$ es un $K[X]$-módulo definido por para cada
+    $p \in K[X]$
+    \begin{equation*}
+        p \cdot v = p (T(v)).
+    \end{equation*}
+   Sea $\mu$ el polinomio mínimo de $T$, razonaremos por contradicción. 
+   Si $T$ admite una descomposición en factores de la forma
+   $\mu = \prod^2_i p_i$ . 
+   Para cada $i \in \{1, 2\}$ llamamos  $q_i = \frac{\mu}{p_i}$ y vemos que define un subespacio vectorial sobre $K$
+   \begin{equation*}
+       V_i = \{ v \in V : q_i \cdot v = 0\}
+   \end{equation*}
+   ya que
+   \begin{itemize}
+       \item Para cualquiera $u,v \in V_i$ se cumple que 
+       $q_i \cdot (u + v) = q_i \cdot u +q_i \cdot v = 0$,
+        por lo que $u+v  \in V_i$. 
+        \item Para cualquier $u \in V_i$ y $k \in K$ podemos ver $k$ como un elemento del  $K[x]-$módulo definido por 
+        $x \mapsto kT(x)$, de esta manera: 
+        $q_i \cdot (k \cdot u) = (q_i \cdot k )\cdot u = k \cdot q_i \cdot u =  k \cdot 0 = 0.$
+   \end{itemize}
+    Además son $T$-invariantes puesto que tomando  
+    $v \in V_i$ cualquiera 
+   \begin{equation*}
+       q_i \cdot T(v) 
+       = q_i \cdot x \cdot  v 
+       = x \cdot q_i \cdot v 
+       = x \cdot 0
+       = T(0)
+       = 0. 
+   \end{equation*}
+
+Por hipótesis los únicos subespacios $T$-invariantes son los triviales:
+
+\begin{enumerate}
+    \item Si $V_i = V$ entonces $Ann_{K[K]}(V)= <q_i>$, lo cual contradice que $\mu$ sea polinomio mínimo, por lo que 
+    $V_i=\{0\}$ para cualquier $i \in \{1, 2\}$. 
+    \item Si $V_i=\{0\}$ consideramos $j \neq i$ y tenemos que 
+    $0 = \mu \cdot v =  q_i \cdot q_j \cdot v = 0$ sii $q_j \cdot v = 0$ por lo que $Ann_{K[K]}(V)= <q_j>$ lo cual vuelve a contradecir que $\mu$ sea mínimo.
+\end{enumerate}
+
+Concluimos por tanto que $\mu$ debe de ser irreducible. 
 \end{proof}
 
 
-Contraejemplo de que el recíproco no es cierto. 
+\textbf{Contraejemplo de que el recíproco no es cierto.}
 
+Tomamos el espacio vectorial $\R^2$, sobre el cuerpo $\R$ y la aplicación lineal identidad $1: \R^2 \longrightarrow \R^2$. 
 
+Está claro que todos los subespacios vectoriales son $1-$invariantes. 
 
+Además se tiene que el polinomio mínimo de $1$ es $\mu = 0$, ya que debe satisfacer que 
+\begin{align*}
+    Ann_{\R[x]}(\R) 
+    &= 
+    \{
+        p \in \R[x] : p \cdot v = 0 \quad \forall v \in \R^2
+    \}
+    \\
+    &= 
+    \{
+        p \in \R[x] : p(v) = 0 \quad \forall v \in \R^2
+    \}
+    \\
+    &= <\mu>.
+\end{align*}
 
 \end{document}
