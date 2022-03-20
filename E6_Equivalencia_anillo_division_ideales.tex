@@ -33,7 +33,9 @@
     Sea $A$ un anillo, $A$ es un anillo de división sii tiene exactamente dos ideales a izquierda. 
 \end{teorema*}   
 \begin{proof}
-Condición suficiente: 
+ 
+
+\subsubsection*{Condición suficiente:}
 
 Por definición $N$ es un submódulo del módulo regular de $A$ si 
 para cualquier $m\in N$ se tiene que $am \in N$ sea cual sea $a \in A$. 
@@ -46,17 +48,29 @@ $a 1 \in N$ para todo $a \in A$, esto es $N=A$.
 
 Es decir acabamos de probar que cualquier submódulo no trivial es necesariamente el total, por lo que concluímos que tiene dos submódulo. 
 
-Condición necesaria: 
+\subsubsection*{Condición necesaria:} 
 
-Está claro que $\{0\}$ y $A$ son submódulos del módulo regular $A$, puesto que tiene solo dos e dos ideales a la izquierda deben de ser ellos.  
+Está claro que $\{0\}$ y $A$ son submódulos del módulo regular $A$, 
+puesto que tiene solo dos ideales a la izquierda deben de ser ellos.  
 
-Tomamos $a \in A$ y queremos ver que tiene inverso. Por se $A$ 
+Tomamos $a \in A$ distinto de cero y queremos ver que tiene inverso. Por se $A$ 
 un ideal a la izquierda 
-$Aa = A$ por lo que existirá un elemento $a^{-1} \in A$ tal que 
-$a^{-1} a = 1$. 
-Por otro lado repetimos el mismo argumento $Aa^{-1} = A$ con  obteniendo $b \in A$ tal que $a^{-1}b = 1$,
-Por lo que concatenando ambas igualdades
-$ba=1$, entonces $ba^{-1}a=c$, $(ba^{-1})a=b$, $a = b$ probando con ello lo buscado
-$$a^{-1}a = 1 = ba^{-1} =  a a^{-1}.$$
+$Aa = A$ por lo que existirá un elemento $a' \in A$ tal que 
+$a' a = 1$. 
+Por otro lado repetimos el mismo argumento $Aa' = A$ por lo que 
+existe $a'' \in A$ tal que $a''a' = 1$,
+De aquí se deduce que 
+\begin{align*}
+    a'a = 1 
+    \Leftrightarrow  
+    a''(a'a) = a''1
+    \Leftrightarrow 
+    a = a''.
+\end{align*}
+Por lo que acabamos de ver que 
+\begin{align*}
+    a'a = 1 = aa',
+\end{align*}
+es decir que $a' = a^{-1}$ como queríamos probar. 
 \end{proof}
 \end{document}
