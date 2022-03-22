@@ -1,0 +1,52 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla para un art�culo en LaTeX en espa�ol.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+% Paquetes de la AMS:
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+% Paquete para enumerar
+\usepackage{enumerate}
+
+% Teoremas
+%--------------------------------------------------------------------------
+\newtheorem*{teorema*}{Teorema}
+\newtheorem{teorema}{Teorema}
+
+% Atajos.
+%------------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+%-------------------------------------------------------------------------
+\title{Ejercicio 16}
+\author{Blanca Cano Camarero}
+
+\begin{document}
+\maketitle
+
+\begin{teorema*}
+    Sea $A$ un dominio de ideales principales. 
+    Se tiene que
+    \begin{enumerate}[i]
+        \item ${_A}A$ es de longitud finita si y sólo si A es un cuerpo.
+        \item Si $I$ es un ideal no nulo de $A$, entonces el $A-$módulo $A/I$ es de longitud finita. 
+    \end{enumerate}
+    Debe de preguntarse uno también si se sabe algo sobre la longitud y los factores de composición de $A/I$ de un generador del ideal $I$?.
+\end{teorema*}   
+
+\begin{proof}
+    hola esto es una demostración.
+\end{proof}
+
+
+
+
+
+\end{document}

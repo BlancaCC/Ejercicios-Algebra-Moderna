@@ -1,0 +1,50 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Plantilla para un art�culo en LaTeX en espa�ol.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Esto es para poder escribir acentos directamente:
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+
+% Paquetes de la AMS:
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+
+% Teoremas
+%--------------------------------------------------------------------------
+\newtheorem*{teorema*}{Teorema}
+\newtheorem{teorema}{Teorema}
+
+% Atajos.
+%------------------------------------------------------------------------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+%-------------------------------------------------------------------------
+\title{Ejercicio 14}
+\author{Blanca Cano Camarero}
+
+\begin{document}
+\maketitle
+
+\begin{teorema*}
+    Sea $K$ un cuerpo de característica $0$ y $K[x]$ el anillo de polinomios. Consideramos la aplicación lineal $T: K[X] \longrightarrow K[X]$ 
+    dada por $T(f) = f'$, 
+    la derivada formal de $f'$.
+    Esto define sobre $K[X]$ una estructura de $K[X]-$módulo a través de $T$. 
+
+    Queremos pues probar que $K[X]$ con esta estructura es un $K[X]-$ módulo artiniano y que además no es isomorfo al $K[X]-$módulo regular.
+\end{teorema*}   
+
+\begin{proof}
+    hola esto es una demostración.
+\end{proof}
+
+
+
+
+
+\end{document}
