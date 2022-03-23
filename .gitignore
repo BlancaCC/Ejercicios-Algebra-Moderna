@@ -277,4 +277,9 @@ TSWLatexianTemp*
 
 #pdf
 *.pdf
+
+#Otros 
 .DS_Store
+Borradores
+
+
