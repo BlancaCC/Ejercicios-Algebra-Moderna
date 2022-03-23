@@ -1,18 +1,12 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Plantilla para un art�culo en LaTeX en espa�ol.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass{article}
 
 % Esto es para poder escribir acentos directamente:
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 
-
-% Paquetes de la AMS:
+%Paquetes de la AMS:
 \usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{xcolor} % Para poder escribir con colores 
 
 % Teoremas
 %--------------------------------------------------------------------------
@@ -23,6 +17,7 @@
 %------------------------------------------------------------------------
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
+\newcommand{\K}{K[X]}
 %-------------------------------------------------------------------------
 \title{Ejercicio 14}
 \author{Blanca Cano Camarero}
@@ -40,11 +35,41 @@
 \end{teorema*}   
 
 \begin{proof}
-    hola esto es una demostración.
+    Comenzaremos probando que la estructura de $K[X]-$módulo a través de $T$ es artiniano, viendo que todo 
+    $\Gamma \subseteq \mathcal{L}(K[X])$ tiene un elemento minimal.
+
+    \textcolor{red}{Habría que intentar ver que están encajados}
+    
+    Una vez visto que es artiniano, vamos a comprobar que no es finitamente generado. 
+    
+    Visto $K[X]$ como un grupo aditivo y puesto que el grado de sus polinomios no está acotado (por tener característica cero,
+    $K[X]$ no es finitamente generado
+    ya que si lo fuera, consideramos un polinomios de grado mayor que cualquiera de los elementos de la base y este no podría ser representado por elementos del generador.
+ 
+    Como no es finitamente generado no es noetheriano.
+
+
+    Por otra parte  el submódulo regular de ${_{\K}}\K$ por tener estructura de anillo unitario tiene que sus únicos submódulo son $\{0\}$ y $\K$ 
+    ya que para cualquier submódulo $N$ diferente de $\{0\}$ 
+    existe $0 \neq m \in N$ al ser $\K$ un anillo de división unitario $m^{-1} \in \K$
+    y por ser submódulo debe de cumplir que $m^{-1} m \in N$
+    es decir $1 \in N$
+
+    de donde deducimos que $1 \K \subseteq N$ y por tanto $N=\K$. 
+    Puesto que solo hay dos submódulo posibles está claro que cualquier subconjunto de elemento de $\mathcal{L}(\K)$ tendrá
+    un elemento maximal y otro minimal, es decir en noetheriano y artiniano \textcolor{red}{(en los apuntes tengo que no es artiniano, luego debo de estar razonando mal...)} 
+    luego es finitamente generado. 
+
+    Razonando por contradicción veremos que el $K[X]-$módulo a través de $T$ y el módulo regular no pueden ser isomorfos. 
+
+    Supongamos que existe tal isomorfismo $\phi$, 
+    tomamos cualquier $x$ perteneciente al $K[X]-$módulo a través de $T$
+    y vía el isomorfismo $\phi(x)= y \in {_{\K}}\K$
+    por ser ${_{\K}}\K$ finitamente generado para cualquier 
+    $y \in {_{\K}}\K$ este se escribirá de manera única a partir 
+    de sus generadores $\{g_1, \ldots,g_n\}$, basta considerar
+    $\{\phi^{-1}(g_1), \ldots, \phi^{-1}(g_n)\}$ pa ver que 
+    $x$ admite una representación a partir de tales generados, luego el $K[X]-$módulo a través de $T$ sería finitamente generado, alcanzando con esto una contradicción.
+
 \end{proof}
-
-
-
-
-
 \end{document}
