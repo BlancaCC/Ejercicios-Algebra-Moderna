@@ -42,41 +42,56 @@
 \end{teorema*}   
 
 \begin{proof}
-(I) Condición suficiente, Por ser $A$ un dominio de ideales principales sabemos que es conmutativo, ahora bastará probar que es unitario. 
+(I) Condición suficiente. Por ser $A$ un dominio de ideales principales sabemos que es conmutativo, ahora bastará probar que es unitario. 
 
 Para cualquier $a \in A$ distinto del cero se tiene que 
 $a A = A$ luego existirá $a' \in A$ tal que 
 $a a'=1$ y puesto que es conmutativo se tiene que también 
 $a' a = a a'=1$, es decir, que todo elemento distinto de cero tiene inverso. 
 
-(I) Condición necesaria, por ser un dominio de ideales principales 
-$A = <a>$ con $a \in A$, además $0 \in A$ por ser un cuerpo, y entonces existirá $n \in \N \setminus \{0\}$ tal que $a^n = 0.$
-
-Así pues podemos considerar la siguiente serie de composición 
+(I) Condición necesaria, por ser un cuerpo los únicos ideales que tiene son los impropios. Por ser conmutativo, los ideales serán particularmente ideales a izquierda, es decir los submódulos de $A$, luego la única serie de composición admisible es la simple. 
 \begin{equation*}
-    A = <a> \supset 
-    <a^2> 
-    \supset 
-    \ldots 
-    <a^{n-1}>
-    \supset
-    <a^n> = \{0\}.
+    A = <a> \supset \{0\}.
 \end{equation*}
 
 (II) Si $I$ es impropio, por ser no vacío entonces necesariamente 
 $I=A$ y está claro que el cociente $A/I$ es simple y tendrá longitud 1. 
 
-En caso de ser $I$ un ideal propio, observemos que 
-$A$ es un ideal de $A$ y por estar en un DIP $A=<a>$, por lo que 
-necesariamente $I= <a^e>$ con $e > 1$, entonces consideramos la cadena
-
+En caso de ser $I$ un ideal propio, estará generado por $<\mu>$ que a su vez admitirá una factorización única  $\mu = \prod p_i^{s_i}$, a su vez $A=<\lambda> = < \prod p_i ^{r_i}>$.  
+Definimos de manera inducctiva a continuación la aplicación 
 \begin{equation*}
-    \frac{<a>}{<a^e>} \supset  \frac{<2a>}{<a^e>} 
-    \supset \ldots \supset
-    \frac{<a^e -a>}{<a^e>}
-    \supset
-    \frac{<a^e>}{<a^e>} = \{0\}
+    \sigma: \N \times A \longrightarrow \N
 \end{equation*}
+tal que $\sigma(0,p_i) = r_i$
+y donde $\sigma(n+1, \cdot)$ viene determinado de la siguiente manera: 
+\begin{itemize}
+    \item Si existe un  $\sigma(n, p_i) < s_i$ entonces $\sigma(n+1, p_i) = \sigma(n, p_i)+1$ y para el resto de factores $\sigma(n+1, p_j) = \sigma(n, p_j)$.
+    \item  En caso de no encontrar entonces $\sigma(n+1, p_i) = \sigma(n, p_i)$ para cualquier factor.
+\end{itemize}
+
+Bajo esta definición está claro que la definición no es única, pero eso no es un impedimento para que esté bien definida.
+
+A partir de cierto natural $m$, cualquier $w>m$ $\sigma(w, p_i) = s_i$ sea cual sea el factor $p_i$ tomado. 
+Construímos entonces la siguiente serie de composición
+\begin{equation*} 
+    \frac{A}{I} = 
+    \frac{< \prod p_i ^{\sigma(0, p_i)}>}{I} 
+    \supset  
+    \frac{< \prod p_i ^{\sigma(1, p_i)}>}{I} 
+    \supset 
+    \ldots 
+    \supset 
+    \frac{< \prod p_i ^{\sigma(m, p_i)}>}{I}  
+    = \frac{I}{I} 
+    = 
+    \{0\}
+\end{equation*}
+
+
+A la vista de esta construcción está claro que la longitud será el mínimo $m$ tal que 
+$\sigma(m, \cdot)= \sigma(m+1, \cdot)$
+es decir el número de factores $p_i^{e_i}$ que $p_i^{e_i} \lambda | \mu$
+y la forma de construirlo viene determinada por $\sigma$. 
 \end{proof}
 
 
