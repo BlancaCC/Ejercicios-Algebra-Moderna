@@ -38,11 +38,45 @@
         \item ${_A}A$ es de longitud finita si y sólo si A es un cuerpo.
         \item Si $I$ es un ideal no nulo de $A$, entonces el $A-$módulo $A/I$ es de longitud finita. 
     \end{enumerate}
-    Debe de preguntarse uno también si se sabe algo sobre la longitud y los factores de composición de $A/I$ de un generador del ideal $I$?.
+    Añadir comentario si se sabe algo sobre la longitud y los factores de composición de $A/I$ de un generador del ideal $I$?.
 \end{teorema*}   
 
 \begin{proof}
-    hola esto es una demostración.
+(I) Condición suficiente, Por ser $A$ un dominio de ideales principales sabemos que es conmutativo, ahora bastará probar que es unitario. 
+
+Para cualquier $a \in A$ distinto del cero se tiene que 
+$a A = A$ luego existirá $a' \in A$ tal que 
+$a a'=1$ y puesto que es conmutativo se tiene que también 
+$a' a = a a'=1$, es decir, que todo elemento distinto de cero tiene inverso. 
+
+(I) Condición necesaria, por ser un dominio de ideales principales 
+$A = <a>$ con $a \in A$, además $0 \in A$ por ser un cuerpo, y entonces existirá $n \in \N \setminus \{0\}$ tal que $a^n = 0.$
+
+Así pues podemos considerar la siguiente serie de composición 
+\begin{equation*}
+    A = <a> \supset 
+    <a^2> 
+    \supset 
+    \ldots 
+    <a^{n-1}>
+    \supset
+    <a^n> = \{0\}.
+\end{equation*}
+
+(II) Si $I$ es impropio, por ser no vacío entonces necesariamente 
+$I=A$ y está claro que el cociente $A/I$ es simple y tendrá longitud 1. 
+
+En caso de ser $I$ un ideal propio, observemos que 
+$A$ es un ideal de $A$ y por estar en un DIP $A=<a>$, por lo que 
+necesariamente $I= <a^e>$ con $e > 1$, entonces consideramos la cadena
+
+\begin{equation*}
+    \frac{<a>}{<a^e>} \supset  \frac{<2a>}{<a^e>} 
+    \supset \ldots \supset
+    \frac{<a^e -a>}{<a^e>}
+    \supset
+    \frac{<a^e>}{<a^e>} = \{0\}
+\end{equation*}
 \end{proof}
 
 
