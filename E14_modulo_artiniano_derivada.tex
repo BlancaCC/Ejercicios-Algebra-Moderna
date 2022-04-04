@@ -35,41 +35,45 @@
 \end{teorema*}   
 
 \begin{proof}
+
+    La estructura de $K$-módulo viene dada de la siguiente manera 
+    \begin{equation}\label{eq:k-modulo}
+        p \cdot q = \sum^{grado(p)}_{g = 0} p_i T^{(g)}(q)
+    \end{equation}
+    Donde $T^{(g)}$ representa la derivada $g$-ésima y $p_i \in K$ son los respectivos coeficientes del polinomio $p = \sum^{grado(p)}_{g = 0} p_i x^g$. 
+
     Comenzaremos probando que la estructura de $K[X]-$módulo a través de $T$ es artiniano, viendo que todo 
     $\Gamma \subseteq \mathcal{L}(K[X])$ tiene un elemento minimal.
+    Observemos que por (\ref{eq:k-modulo}) y ser $K$ un cuerpo, necesariamente todo submódulo será de la forma 
+    \begin{equation}
+        N_g = 
+        \{
+            p \in K[x] \quad |  \quad grado(p) < g
+        \}
+    \end{equation}
+    Donde $N_0 = \{0\}$. 
 
-    \textcolor{red}{Habría que intentar ver que están encajados}
-    
-    Una vez visto que es artiniano, vamos a comprobar que no es finitamente generado. 
-    
-    Visto $K[X]$ como un grupo aditivo y puesto que el grado de sus polinomios no está acotado (por tener característica cero,
-    $K[X]$ no es finitamente generado
-    ya que si lo fuera, consideramos un polinomios de grado mayor que cualquiera de los elementos de la base y este no podría ser representado por elementos del generador.
- 
-    Como no es finitamente generado no es noetheriano.
+    Así pues, para cualquier conjunto $\Gamma$ tendrá un elemento minimal que será $N_m$ con $m = \min\{ g \in \N : N_g \in \Gamma\}.$
 
 
-    Por otra parte  el submódulo regular de ${_{\K}}\K$ por tener estructura de anillo unitario tiene que sus únicos submódulo son $\{0\}$ y $\K$ 
-    ya que para cualquier submódulo $N$ diferente de $\{0\}$ 
-    existe $0 \neq m \in N$ al ser $\K$ un anillo de división unitario $m^{-1} \in \K$
-    y por ser submódulo debe de cumplir que $m^{-1} m \in N$
-    es decir $1 \in N$
+    Por otra parte se tiene que 
+    $K[X]-$módulo regular no es artiniano, ya que los subgrupos de la forma 
+    $<x^n>$ son submódulo y definen la cadena de composición 
+    \begin{equation} \label{eq:no-estabiliza}
+        \ldots \subset <x^{n+1}>
+        \subset <x^{n}>
+        \ldots 
+        \subset <x^{2}>
+        \subset <x>
+        \subset K[x]
+    \end{equation}
+    que no se estabiliza. 
 
-    de donde deducimos que $1 \K \subseteq N$ y por tanto $N=\K$. 
-    Puesto que solo hay dos submódulo posibles está claro que cualquier subconjunto de elemento de $\mathcal{L}(\K)$ tendrá
-    un elemento maximal y otro minimal, es decir en noetheriano y artiniano \textcolor{red}{(en los apuntes tengo que no es artiniano, luego debo de estar razonando mal...)} 
-    luego es finitamente generado. 
+    Veamos ahora que no existe un isomorfismo $\phi$ entre  $K[X]-$módulo regular 
+    y $K[x]$ con la con la estructura definida a través de $T$, ya que de ser así, puesto que si $N$ es un submódulo de 
+    $K[X]-$módulo regular $\phi(N)$ lo sería de  $K[x]$ con la con la estructura definida a través de $T$ 
+    entonces tomando isomorfimo en cada factor de la cadena (\ref{eq:no-estabiliza}) obtendríamos una cadena que no se estabiliza en $K[x]$ con la con la estructura definida a través de $T$ lo cual contradice que sea artiniano, llegando con esto a una contradicción.
 
-    Razonando por contradicción veremos que el $K[X]-$módulo a través de $T$ y el módulo regular no pueden ser isomorfos. 
-
-    Supongamos que existe tal isomorfismo $\phi$, 
-    tomamos cualquier $x$ perteneciente al $K[X]-$módulo a través de $T$
-    y vía el isomorfismo $\phi(x)= y \in {_{\K}}\K$
-    por ser ${_{\K}}\K$ finitamente generado para cualquier 
-    $y \in {_{\K}}\K$ este se escribirá de manera única a partir 
-    de sus generadores $\{g_1, \ldots,g_n\}$, basta considerar
-    $\{\phi^{-1}(g_1), \ldots, \phi^{-1}(g_n)\}$ pa ver que 
-    $x$ admite una representación a partir de tales generados, luego el $K[X]-$módulo a través de $T$ sería finitamente generado, alcanzando con esto una contradicción.
 
 \end{proof}
 \end{document}
